@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+
+int main ()
+{
+	int x , y1 , y , z , a , b  ,c;
+	float y2;
+	
+	printf("Masukan Nilai x = ");
+	scanf("%d", &x);
+	printf("Masukan Nilai y = ");
+	scanf("%d", &y);
+	printf("Masukan Nilai a = ");
+	scanf("%d", &a);
+	printf("Masukan Nilai b = ");
+	scanf("%d", &b);
+	printf("Masukan Nilai c = ");
+	scanf("%d", &c);
+	printf("--------------------------------\n");
+	
+	//perintah pertanyaan
+	y1 = b*(x*x) + (0.5*x) - c;
+	y2 = (0.3*x*y)/(2*a);
+	
+	printf("hasil dari b*(x*x) + (0.5*x) - c adalah %d\n", y1);
+	printf("hasil dari (0.3*x*y)/(2*a) adalah %f\n", y2);
+	
+	getch();
+}
