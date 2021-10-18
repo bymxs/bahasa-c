@@ -1,2 +1,2 @@
 # bahasa-c
-mencari rata rata
+semester 1
