@@ -1,0 +1,63 @@
+#include <stdio.h>
+
+int main( ) 
+{
+	char name [50];
+	int g, h, i, j;
+	int e = 4;
+	int k ;
+	
+	printf("*********************************************\n");
+	printf("**** PEMBERIAN NILAI RATA RATA MAHASISWA ****\n");
+	printf("*********************************************\n");
+	printf("*********************************************\n");
+	//input nilai	
+	printf("Masukkan Nama Mahasiswa : ");
+	scanf("%[^\n]s]", &name);
+	printf("<================================>\n");
+	printf("Masukkan nilai Pemrograman dasar : ");
+	scanf("%d", &g);
+	printf("<================================>\n");
+	printf("Masukkan nilai Kalkulus : ");
+	scanf("%d", &h);
+	printf("<================================>\n");
+	printf("Masukkan nilai PTI : ");
+	scanf("%d", &i);
+	printf("<================================>\n");
+	printf("Masukkan nilai Ormas : ");
+	scanf("%d", &j);
+	printf("<================================>\n");
+	
+	//rata rata
+	k = (g+h+i+j)/e;
+	if(k>=75){
+		printf("\n");
+		printf("\n");printf("Mahasiswa Atas Nama : ");
+		printf("%s", &name);
+		printf("\n#################################");
+		printf("\n#");
+		printf("				#");
+		printf("\n#");printf(" *** Selamat Anda Lulus *** ");printf("	#");printf("\n");
+		printf("#");printf(" Dengan Nilai Rata-Rata : ");
+		printf("%d", k);printf("	#");
+		printf("\n#");
+		printf("				#");
+		printf("\n#################################");
+	}
+	else{
+		printf("\n");
+		printf("\n");printf("Mahasiswa Atas Nama : ");
+		printf("%s", &name);
+		printf("\n#################################");
+		printf("\n#");
+		printf("				#");
+		printf("\n#");printf(" xxx Maaf Anda Tidak Lulus xxx ");printf("#");printf("\n");
+		printf("#");printf("Dengan Nilai Rata-Rata : ");
+		printf("%d", k);printf("	#");
+		printf("\n#");
+		printf("				#");
+		printf("\n#################################");
+	}
+	getch();
+
+}
