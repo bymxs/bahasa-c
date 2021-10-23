@@ -1,0 +1,84 @@
+#include <stdio.h>
+#include <conio.h>
+#define PHI 3.14
+
+float volumekubus (float s){
+	return (s*s*s*s);
+}
+float luaskubus (float s){
+	return (2*s*s);
+}
+
+float volumebalok (float p,float l,float t){
+	return (p*l*t);
+}
+float luasbalok (float p,float l,float t){
+	return 2*(p * l) + 2*(p * l) + 2*(t * l);
+}
+
+float volumetabung (float r,float t){
+	return (PHI*(r*r)*t);
+}
+float luastabung (float r,float t){
+	return (2*PHI*(r*t));
+}
+//data menu
+
+int main(){
+	char bangunruang;
+	float s,p,l,t,r; //s=sisi,p=panjang,l=lebar,t=tinggi,r=jari-jari
+	float VKubus,LKubus;
+	float VBalok,LBalok;
+	float VTabung,LTabung;
+	//menu
+	printf("Menu yang akan menampilkan volume dan luas \n");
+	printf("1 = Kubus\n");
+	printf("2 = Balok\n");
+	printf("3 = Tabung\n");
+	printf("Masukkan yang Anda Pilih : ");
+	scanf("%c",&bangunruang);
+	
+	switch(bangunruang){
+		case '1':
+		//rumus kubus
+		printf("Masukkan Nilai sisi : ");
+		scanf("%f",&s);
+		VKubus = volumekubus(s);
+		LKubus = luaskubus (s);
+		printf("Volume Kubus adalah : %.2f\n",VKubus);
+		printf("Luas kubus adalah : %.2f\n",LKubus);
+		break;
+		
+		
+		case '2':
+		//rumus balok
+		printf("Masukkan Nilai Panjang : ");
+		scanf("%f",&p);
+		printf("Masukkan Nilai Lebar : ");
+		scanf("%f",&l);
+		printf("Masukkan Nilai Tinggi : ");
+		scanf("%f",&t);
+		VBalok = volumebalok(p,l,t);
+		LBalok = luasbalok(p,l,t);
+		printf("Volume Kubus Adalah : %.2f\n",VBalok);
+		printf("Luas Balok Adalah : %.2f\n",LBalok);
+		break;
+		
+		
+		case '3':
+		//rumus tabung
+		printf("Masukkan Nilai jari-jari : ");
+		scanf("%f",&r);
+		printf("Masukkan Tinggi : ");
+		scanf("%f",&t);
+		VTabung = volumetabung(r,t);
+		LTabung = luastabung(r,t);
+		printf("Volume Kubus Adalah : %.2f\n",VTabung);
+		printf("Luas Balok Adalah : %.2f\n",LTabung);
+		break;
+		
+	default:
+		printf("Tidak ada dimenu");
+		break;
+	}
+}
